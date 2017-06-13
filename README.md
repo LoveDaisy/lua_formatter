@@ -6,7 +6,7 @@ Usage:
 
 `python lua_format.py <path>`
 
-and it will do reformat for all Lua scripts in `<path>`.
+and it will do reformat for all Lua scripts in `<path>`. You can do test on `lua_script.lua` by doing `python lua_format.py .`
 
 *WARNING*
 
