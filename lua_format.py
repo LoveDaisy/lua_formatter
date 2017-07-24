@@ -152,7 +152,7 @@ def format_code(toks):
         if t[0] == "BR" and last_tok and last_tok[0] != "BR":
             code = code.strip()
 
-        if t[0] == "ID" and t[1] in ("end", "else", "elseif"):
+        if t[0] == "ID" and t[1] in ("end", "else", "elseif", "until"):
             indent_level -= 1
             indent_scope.pop()
         if t[0] == "RBRK":
@@ -162,7 +162,7 @@ def format_code(toks):
         if last_tok and last_tok[0] == "BR":
             code += " " * indent_level * 4
 
-        if t[0] == "ID" and t[1] in ("function", "if", "for", "else", "elseif"):
+        if t[0] == "ID" and t[1] in ("function", "if", "for", "else", "elseif", "repeat"):
             indent_level += 1
             indent_scope.append(t)
         if t[0] == "LBRK":
